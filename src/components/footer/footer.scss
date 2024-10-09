@@ -1,0 +1,101 @@
+.footer {
+  width: 100%;
+  // position: relative;
+  // bottom: 0;
+  background: #03161d;
+  &-wrapper {
+    width: 90%;
+    margin: 100px auto 0;
+    padding: 30px 0;
+  }
+  &-top {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  &-logo {
+    width: 70px;
+    height: 70px;
+  }
+  &-info {
+    display: flex;
+    gap: 40px;
+  }
+  &-box {
+    cursor: pointer;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #f5f5f5;
+    font-weight: 600;
+  }
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    border-radius: 100%;
+    background: #1d2e34;
+  }
+  &-gmail {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5px;
+  }
+  &-social {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #f5f5f5;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &-tel {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 20px;
+  }
+  &-number {
+    transition: all 0.3s;
+    &:hover {
+      color: #05f;
+    }
+  }
+  &-bottom {
+    width: 100%;
+    padding: 7px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 0;
+    background: #ffffff;
+  }
+  &-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  &-img {
+    width: 50px;
+    height: 50px;
+  }
+  &-title {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  &-right {
+    font-size: 15px;
+  }
+}
