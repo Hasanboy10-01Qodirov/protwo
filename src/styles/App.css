@@ -10,3 +10,34 @@ li {
   text-decoration: none;
   list-style: none;
 }
+.button {
+  --color: hsl(208, 72%, 39%);
+  min-width: 140px;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid var(--color);
+  background: var(--color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  position: relative;
+  isolation: isolate;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #111;
+  inset: 0;
+  border-radius: 10px;
+  scale: 0 1;
+  color: #fff;
+  transition: scale 450ms;
+}
+.button:hover::after,
+.button:focus-visible::after {
+  scale: 1 1;
+}

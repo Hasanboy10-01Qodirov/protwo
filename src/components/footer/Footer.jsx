@@ -90,7 +90,7 @@ const Footer = () => {
                 +998 (50) 718 98 07
               </a>
               <a href="tel:+998935305612" className="footer-number">
-                +998 (930 530 56 12)
+                +998 (93) 530 56 12
               </a>
             </div>
           </div>
