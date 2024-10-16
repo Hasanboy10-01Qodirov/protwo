@@ -1,0 +1,123 @@
+.about {
+  width: 100%;
+  &-wrapper {
+    width: 1200px;
+    margin: 50px auto 0;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  &-back {
+    width: 190px;
+    padding: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #f5f5f5;
+    background: #35454a;
+    border: none;
+    border-radius: 12px;
+    .navlink {
+      font-size: 15px;
+      font-weight: 500;
+      color: #f5f5f5;
+    }
+    &:hover .icon {
+      animation: back ease-in-out 0.4s 2;
+    }
+  }
+  &-parts {
+    max-width: 700px;
+    width: 700px;
+    h3 {
+      font-size: 36px;
+      font-weight: 600;
+      margin: 0 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 10px;
+      p {
+        color: #09d;
+      }
+    }
+  }
+  &-top {
+    width: 100%;
+    max-height: 560px;
+    height: 520px;
+    border-radius: 32px;
+    overflow: hidden;
+  }
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+    &:hover {
+      scale: 1.07;
+    }
+  }
+  &-center,
+  &-bottom {
+    margin: 30px 0 25px;
+    padding: 15px 25px 25px;
+    background-color: #35454a;
+    border-radius: 20px;
+  }
+  &-description {
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ddd;
+  }
+  &-bottom {
+    padding: 30px;
+    h3 {
+      font-size: 34px;
+    }
+  }
+  &-counter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  &-count {
+    width: 150px;
+    color: #f5f5f5;
+  }
+  &-number {
+    font-size: 50px;
+    font-weight: 650;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 5px;
+    p {
+      color: #09d;
+    }
+  }
+  &-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ccc;
+  }
+  &-smm {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+@keyframes back {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-8px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

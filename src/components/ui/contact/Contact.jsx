@@ -129,7 +129,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="contact-wrapper">
         <div className="contact-parts">
           <div className="contact-left">

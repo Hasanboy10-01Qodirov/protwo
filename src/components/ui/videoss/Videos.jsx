@@ -33,7 +33,7 @@ const Videos = () => {
         navigation
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         loop={true}
-        modules={[Navigation, Autoplay]}
+        modules={[ Navigation, Autoplay]}
       >
         {videos?.map((elem) => (
           <SwiperSlide key={elem.id}>

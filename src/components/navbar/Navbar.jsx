@@ -6,6 +6,7 @@ import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -46,9 +47,9 @@ const Navbar = () => {
       <div className="navbar-wrapper">
         <ul className="navbar-list">
           <li className="navbar-item">
-            <a href="#" className="navbar-link">
+            <NavLink to="/" className="navbar-link">
               Asosiy
-            </a>
+            </NavLink>
           </li>
           <li
             className={`navbar-item dropdown ${
@@ -76,19 +77,19 @@ const Navbar = () => {
             </ul>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">
+            <NavLink to="/about" className="navbar-link">
               Biz Haqimizda
-            </a>
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">
+            <NavLink to="/contact" className="navbar-link">
               Kontakt
-            </a>
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">
+            <NavLink to="/jobs" className="navbar-link">
               Vakansiya
-            </a>
+            </NavLink>
           </li>
           <li className="navbar-item">
             <a href="#" className="navbar-link">

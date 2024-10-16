@@ -19,25 +19,25 @@ const Footer = () => {
           <img src={logo} alt="" className="footer-logo" />
           <div className="footer-info">
             <div className="footer-box">
-              <i className="footer-icon">
+              <div className="footer-icon">
                 <CalendarMonthOutlinedIcon />
-              </i>
+              </div>
               <a className="footer-name" target="_blank">
                 9:00-17:00 du-ju
               </a>
             </div>
             <div className="footer-box">
-              <i className="footer-icon">
+              <div className="footer-icon">
                 <LocationOnOutlinedIcon />
-              </i>
+              </div>
               <a className="footer-name" target="_blank">
                 O'zbekiston barcha xududlarda
               </a>
             </div>
             <div className="footer-box">
-              <i className="footer-icon">
+              <div className="footer-icon">
                 <MailOutlinedIcon />
-              </i>
+              </div>
               <div className="footer-gmail">
                 <a
                   href="mailto:hasanboikadyrov0828@gmail.com"

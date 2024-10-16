@@ -3,6 +3,7 @@
   margin: 0;
   font-family: "Commissioner";
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 a,
 li {
@@ -11,7 +12,7 @@ li {
   list-style: none;
 }
 .button {
-  --color: hsl(208, 72%, 39%);
+  --color: #1c68ab;
   min-width: 140px;
   font-size: 16px;
   font-weight: 500;

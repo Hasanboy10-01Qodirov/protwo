@@ -1,0 +1,122 @@
+.ourteam {
+  width: 100%;
+  margin: auto;
+
+  .ourteam-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .ourteam-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto -100px;
+    width: 230px;
+    height: 230px;
+    position: relative;
+    z-index: 10;
+    background: #1d2e34;
+    border: 20px solid #1d2e34;
+    border-radius: 300px;
+    .ourteam-img {
+      border-radius: 50%;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .ourteam-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a3437;
+    border-radius: 20px;
+    padding: 120px 30px 30px;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    .ourteam-box {
+      margin-bottom: 20px;
+      h4 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        color: #9ba9b4;
+      }
+    }
+    .ourteam-icons {
+      margin: 10px 0 0 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0px;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        margin-right: 10px;
+        font-size: 18px;
+        padding: 5px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+        &:hover {
+          color: #5effae;
+        }
+        &:nth-child(1) {
+          background: #d0e;
+        }
+        &:nth-child(2) {
+          background: #0088ff;
+        }
+        &:nth-child(3) {
+          background: #1c68ab;
+        }
+      }
+    }
+  }
+  .ourteam-prev,
+  .ourteam-next {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    background-color: #00aaff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    overflow: hidden;
+    button {
+      cursor: pointer;
+      color: white;
+      background-color: #00aaff;
+      font-size: 26px;
+      border: none;
+      outline: none;
+      overflow: hidden;
+    }
+  }
+}
+.ourteam-prev {
+  left: -18px;
+  button {
+    margin: -9px 0 0 -2px;
+  }
+}
+.ourteam-next {
+  right: -18px;
+  button {
+    margin: -9px -2px 0 0;
+  }
+}

@@ -54,7 +54,7 @@ const Clients = () => {
         <button className="button">Mijoz bo'lish</button>
       </div>
       <Swiper
-        spaceBetween={20}
+        spaceBetween={25}
         slidesPerView={4}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         loop={true}
@@ -62,7 +62,7 @@ const Clients = () => {
       >
         {client.map((elem) => (
           <SwiperSlide key={elem.id}>
-            <a href={elem.href} className="clients-client">
+            <a href={elem.href} target="_blank" className="clients-client">
               <img src={elem.img} alt={elem.name} className="clients-img" />
             </a>
           </SwiperSlide>
