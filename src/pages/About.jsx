@@ -8,22 +8,66 @@ import instagram from "../assets/img/instagram.png";
 import youtube from "../assets/img/youtube.png";
 import discord from "../assets/img/discord.png";
 import vk from "../assets/img/vk.png";
-import about from "../assets/data/about";
 import WestIcon from "@mui/icons-material/West";
 import { NavLink } from "react-router-dom";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
-
+  const { t } = useTranslation();
+  const about = [
+    {
+      id: 1,
+      number: "3",
+      char: "+",
+      name: "Yil",
+      text: t("about.statistics.successful_teams"),
+    },
+    {
+      id: 2,
+      number: "24",
+      char: "",
+      name: "Xodimlar",
+      text: t("about.statistics.working_in_company"),
+    },
+    {
+      id: 3,
+      number: "138",
+      char: "",
+      name: "Jamiyatlar",
+      text: t("about.statistics.promoted_in_social_media"),
+    },
+    {
+      id: 4,
+      number: "336",
+      char: "",
+      name: "Sayt",
+      text: t("about.statistics.developed_and_launched"),
+    },
+    {
+      id: 5,
+      number: "53",
+      char: "",
+      name: "Jamiyatlar",
+      text: t("about.statistics.promoted_in_social_media"),
+    },
+    {
+      id: 6,
+      number: "218",
+      char: "",
+      name: "grafana",
+      text: t("about.statistics.products_in_graph"),
+    },
+  ];
   return (
     <div className="about">
       <div className="about-wrapper">
         <NavLink to="/" className="navlink">
           <button className="about-back">
             <WestIcon fontSize="small" className="icon" />
-            Orqaga
+            {t("back")}
           </button>
         </NavLink>
         <div className="about-parts">
@@ -31,32 +75,16 @@ const About = () => {
             <img src={img} alt="" className="about-img" />
           </div>
           <div className="about-center">
-            <h3 className="clients-title">
-              Biz <p>haqimizda</p>
-            </h3>
+            <h3 className="clients-title">{t("about.title")}</h3>
             <p className="about-description">
-              InOut reklama joylashtirish xizmatlarining keng assortimentini
-              taklif etadi, eng ko'p talab qilinadigani Toshkentdagi tashqi
-              reklamadir. Siz buyurtma berishingiz va reklamalarni LED
-              ekranlarga, shuningdek, laytboks va bannerlarga joylashtirishingiz
-              mumkin. Reklama imkon qadar tezroq, kafolatli va hamyonbop narxda
-              amalga oshiriladi. ANIQ FOYDA.
+              {t("about.description.part1")} {t("about.description.part2")}.
             </p>
             <p className="about-description">
-              Tashqi reklama maqsadli auditoriyani kerakli ma'lumotlar bilan
-              ta'minlashning arzon va juda samarali usulidir. Dastlabki
-              ma'lumotlarni taqdim etish uchun tashrif qog'ozidan foydalanish
-              maqsadli auditoriyangizning e'tiborini jalb qilish imkonini
-              beradi. LED ekranlardan tashqi reklama sifatida foydalanish eng
-              istiqbolli formatlardan biri bo'lib, ayni paytda o'z tovarlarini
-              (xizmatlarini) reklama qiluvchi kompaniya yoki tashkilotning
-              yuqori maqomini ko'rsatadi.
+              {t("about.description.part3")} {t("about.description.part4")}
             </p>
           </div>
           <div className="about-bottom">
-            <h3 className="clients-title">
-              Bizning <p>qisqa statistika</p>
-            </h3>
+            <h3 className="clients-title">{t("about.statistics.title")}</h3>
             <div className="about-counter">
               <VisibilitySensor
                 onChange={(isVisible) => setIsVisible(isVisible)}
@@ -82,9 +110,7 @@ const About = () => {
           </div>
         </div>
         <div className="footer-social">
-          <p className="footer-our-smm about-smm">
-            Bizni ijtimoiy tarmoqlardan toping
-          </p>
+          <p className="footer-our-smm about-smm">{t("about.find_us")}</p>
           <div className="footer-media">
             <a href="https://t.me/dark_net_chik001" target="_blank">
               <img src={telegram} alt="" className="footer-smm" />

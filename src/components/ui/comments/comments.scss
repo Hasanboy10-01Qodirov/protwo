@@ -1,0 +1,179 @@
+.comments {
+  width: 100%;
+  color: #f5f5f5;
+  &__wrapper {
+    max-width: 1200px;
+    margin: 100px auto -40px;
+  }
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    gap: 10px;
+    &--highlight {
+      color: #09f;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  &__item {
+    background: #2a3437;
+    padding: 20px 20px 40px;
+    border-radius: 20px;
+  }
+  &__header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  &__star {
+    margin-top: 20px !important;
+    font-size: 42px !important;
+  }
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  &__info {
+    margin: 7px 0 15px;
+    .comments__name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .comments__date {
+      font-size: 15px;
+      font-weight: 500;
+      color: #d0d0d0;
+    }
+  }
+  &__text {
+    font-weight: 500;
+    margin: 3px 0 5px;
+    color: #aaa;
+  }
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  &__modal-content {
+    background-color: #03161d;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    position: relative;
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+  &__modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: #f5f5f5;
+    cursor: pointer;
+  }
+  label {
+    margin-top: 5px;
+    display: block;
+    margin-bottom: 15px;
+    color: #f5f5f5;
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #2e3c4b;
+      border: none;
+      border-radius: 10px;
+      color: #f5f5f5;
+    }
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+  }
+  .comments__rating-input {
+    display: flex;
+  }
+}
+
+// body.light-theme .comments {
+//   background-color: #f8f9fa; /* Kun rejimi uchun fon rangi */
+//   color: #000; /* Kun rejimi uchun matn rangi */
+
+//   &__item {
+//     background-color: #ffffff; /* Kun rejimi uchun fon rangi */
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yengil soya */
+//   }
+
+//   &__title {
+//     color: #000; /* Kun rejimi uchun matn rangi */
+
+//     &--highlight {
+//       color: #007bff;
+//     }
+//   }
+
+//   &__button {
+//     background-color: #007bff; /* Kun rejimi uchun button rangi */
+//     color: #fff;
+
+//     &:hover {
+//       background-color: #0056b3; /* Kun rejimi hover holatda */
+//       transition: 0.3s ease;
+//     }
+//   }
+
+//   &__modal-content {
+//     background-color: #ffffff; /* Kun rejimi uchun modal fon rangi */
+//     color: #000; /* Kun rejimi uchun matn rangi */
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yengil soya */
+//   }
+
+//   &__modal-close {
+//     color: #000; /* Kun rejimi uchun icon rangi */
+//   }
+
+//   label {
+//     color: #000; /* Kun rejimi uchun matn rangi */
+
+//     input,
+//     textarea {
+//       background-color: #f8f9fa; /* Kun rejimi uchun input va textarea fon rangi */
+//       color: #000; /* Kun rejimi uchun matn rangi */
+//     }
+//   }
+
+//   button[type="submit"] {
+//     background-color: #007bff; /* Kun rejimi uchun button rangi */
+//     color: #fff;
+
+//     &:hover {
+//       background-color: #0056b3; /* Kun rejimi hover holatda */
+//       transition: 0.3s ease;
+//     }
+//   }
+// }

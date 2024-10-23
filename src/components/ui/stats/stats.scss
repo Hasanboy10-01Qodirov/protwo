@@ -6,7 +6,8 @@
   justify-content: center;
 
   &__container {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     background-color: #2a3437;
     padding: 30px 40px;
     border-radius: 20px;
@@ -27,11 +28,10 @@
 
   &__items {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     align-items: center;
-
-    .stats__item {
+      .stats__item {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -63,8 +63,7 @@
   }
 }
 
-/* Yengil rejim */
-body.light-theme .stats {
+:root.light-mode .stats {
   background-color: #f8f9fa;
 
   &__container {

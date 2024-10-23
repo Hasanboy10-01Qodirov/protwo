@@ -1,10 +1,12 @@
 import React from "react";
 import "./catalogs.scss";
+import { useTranslation } from "react-i18next";
 const Catalogs = () => {
+  const { t } = useTranslation();
   const mass = [
     {
       id: 1,
-      name: "Barcha afishalar",
+      name: "allPosters",
       img: (
         <svg
           width="38"
@@ -58,7 +60,7 @@ const Catalogs = () => {
     },
     {
       id: 2,
-      name: "Bo'sh",
+      name: "empty",
       img: (
         <svg
           width="38"
@@ -111,7 +113,7 @@ const Catalogs = () => {
     },
     {
       id: 3,
-      name: "Band qilingan",
+      name: "booked",
       img: (
         <svg
           width="38"
@@ -164,7 +166,7 @@ const Catalogs = () => {
     },
     {
       id: 4,
-      name: "Viloyatlar bo'yicha",
+      name: "byRegion",
       img: (
         <svg
           width="38"
@@ -217,7 +219,7 @@ const Catalogs = () => {
     },
     {
       id: 5,
-      name: "Bayroq ustunlari",
+      name: "flagPoles",
       img: (
         <svg
           data-v-f381235f=""
@@ -271,7 +273,7 @@ const Catalogs = () => {
     },
     {
       id: 6,
-      name: "Bilbordlar",
+      name: "billboards",
       img: (
         <svg
           data-v-f381235f=""
@@ -325,7 +327,7 @@ const Catalogs = () => {
     },
     {
       id: 7,
-      name: "Banner stendi",
+      name: "bannerStands",
       img: (
         <svg
           data-v-f381235f=""
@@ -378,7 +380,7 @@ const Catalogs = () => {
     },
     {
       id: 8,
-      name: "Prizmatronlar",
+      name: "prismatrons",
       img: (
         <svg
           data-v-f381235f=""
@@ -484,7 +486,7 @@ const Catalogs = () => {
     },
     {
       id: 10,
-      name: "Shahar formatlari",
+      name: "securityWall",
       img: (
         <svg
           data-v-f381235f=""
@@ -537,7 +539,7 @@ const Catalogs = () => {
     },
     {
       id: 11,
-      name: "LED Monitor",
+      name: "ledMonitor",
       img: (
         <svg
           data-v-f381235f=""
@@ -596,7 +598,7 @@ const Catalogs = () => {
         {mass?.map((elem) => (
           <div key={elem.id} className="catalogs-catalog catalog">
             <span className="catalogs-img">{elem.img}</span>
-            <p className="catalogs-name">{elem.name}</p>
+            <p className="catalogs-name">{t(elem.name)}</p>
           </div>
         ))}
       </div>

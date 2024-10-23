@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./clients.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -16,8 +16,29 @@ import turan from "../../../assets/img/turan.png";
 import tturan from "../../../assets/img/teamturan.png";
 import turanu from "../../../assets/img/turanu.png";
 import dpt from "../../../assets/img/dpt.png";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  TextField,
+  Button,
+  IconButton,
+} from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import { useTranslation } from "react-i18next";
 
 const Clients = () => {
+  const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   const client = [
     { id: 1, img: click, href: "https://click.uz/ru", name: "Click Up" },
     { id: 2, img: payme, href: "https://payme.uz/", name: "PayMe" },
@@ -46,12 +67,12 @@ const Clients = () => {
     <div className="clients">
       <div className="clients-top">
         <div className="clients-box">
-          <h2 className="clients-title">Ishonchli mijozlar</h2>
-          <p className="clients-text">
-            Davom etilmoqda... Sizning logoingiz uchun ham joy mavjud
-          </p>
+          <h2 className="clients-title">{t("clients.trusted_clients")}</h2>
+          <p className="clients-text">{t("clients.continue")}</p>
         </div>
-        <button className="button">Mijoz bo'lish</button>
+        <button className="button" onClick={handleClickOpen}>
+          {t("clients.become_client")}
+        </button>
       </div>
       <Swiper
         spaceBetween={25}
@@ -62,12 +83,60 @@ const Clients = () => {
       >
         {client.map((elem) => (
           <SwiperSlide key={elem.id}>
-            <a href={elem.href} target="_blank" className="clients-client">
+            <a
+              href={elem.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="clients-client"
+            >
               <img src={elem.img} alt={elem.name} className="clients-img" />
             </a>
           </SwiperSlide>
         ))}
       </Swiper>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>
+          {t("clients.become_client")}
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            style={{ position: "absolute", right: 8, top: 8 }}
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent>
+          <TextField
+            fullWidth
+            margin="dense"
+            label={t("clients.name")}
+            placeholder={t("clients.name_label")}
+            variant="outlined"
+          />
+          <TextField
+            fullWidth
+            margin="dense"
+            label={t("clients.email_or_telegram")}
+            placeholder={t("clients.email_or_telegram")}
+            variant="outlined"
+          />
+          <TextField
+            fullWidth
+            margin="dense"
+            label={t("clients.phone_number")}
+            placeholder={t("clients.phone_label")}
+            variant="outlined"
+          />
+          <TextField
+            fullWidth
+            margin="dense"
+            label={t("clients.your_company")}
+            placeholder={t("clients.your_company")}
+            variant="outlined"
+          />
+          <button className="button">{t("clients.become_client")}</button>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

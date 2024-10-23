@@ -1,0 +1,193 @@
+{
+  "telegram": "Telegram",
+  "presentation": "Presentation (35MB)",
+  "applyNow": "Apply Now",
+  "home": "Home",
+  "services": "Services",
+  "onRoad": "On the Road",
+  "onBridges": "On Bridges",
+  "ledScreen": "LED Screen",
+  "roadAds": "Road Ads",
+  "aboutUs": "About Us",
+  "contact": "Contact",
+  "vacancy": "Vacancies",
+  "reviews": "Reviews",
+  "adsOnBuses": "Ads on Buses",
+  "adsOnLedScreens": "Ads on LED Screens",
+  "adsOnBillboards": "Ads on Billboards",
+  "workingHours": "9:00-17:00 Mon-Fri",
+  "video1_title": "You Can Reach New Heights!",
+  "video2_title": "Explore Our Services",
+  "consultation_button": "Get a Consultation",
+  "welcome_message": "Welcome",
+  "error_message": "Login Error",
+  "invalid_data_warning": "Invalid Data Entered",
+  "become_client": "Become a Client",
+  "name_label": "Name",
+  "email_label": "Email or Telegram",
+  "phone_label": "Phone Number",
+  "message_label": "Your Message",
+  "send_button": "Send",
+  "back": "Back",
+  "map_title": "For Your Advertising",
+  "map_place": "places",
+  "location_popup": "Tashkent, Uzbekistan",
+  "allPosters": "All Posters",
+  "empty": "Empty",
+  "booked": "Booked",
+  "byRegion": "By Region",
+  "flagPoles": "Flagpoles",
+  "billboards": "Billboards",
+  "bannerStands": "Banner Stands",
+  "prismatrons": "Prismatrons",
+  "securityWall": "Security Wall",
+  "cityFormats": "City Formats",
+  "ledMonitor": "LED Monitor",
+
+  "title": "Video",
+  "allVideos": "All Videos",
+
+  "business": {
+    "title": "What We Do",
+    "title1": "Hello World",
+    "description1": "Mars, the fourth planet from the Sun, features in over 5,000 works of fiction...",
+    "title2": "On the Road",
+    "description2": "In Gabon, President Ali Bongo was ousted in a coup shortly after winning reelection...",
+    "title3": "4K Monitor",
+    "description3": "Z-Edge U27P4K 27-Inch Gaming Monitor Ultra HD 4K, Refresh Rate...",
+    "title4": "HD Screen",
+    "description4": "Z-Edge 4K Monitor, U28I4K 28-Inch IPS Ultra HD 3840x2160 IPS Gaming Monitor, 300cd/m², 60Hz...",
+    "title5": "Advertising Services",
+    "description5": "The company offers a wide range of outdoor advertising, printing, and ...",
+    "title6": "Advertising on LED Screens",
+    "description6": "Lorem Ipsum is a simple dummy text of the printing and typesetting industry...",
+    "title7": "Ads on Buses",
+    "description7": "Place your ads on Tashkent city buses 'MAN'...",
+    "more": "More"
+  },
+
+  "team": {
+    "title": "Our Team",
+    "description": "This team delivers your orders efficiently, reliably, and securely.",
+    "full_list_button": "See Full List",
+    "Baholash": "Rating",
+    "members": [
+      {
+        "name": "Alice",
+        "position": "Designer"
+      },
+      {
+        "name": "Mira",
+        "position": "Android Developer"
+      },
+      {
+        "name": "Lisa",
+        "position": "Secretary"
+      },
+      {
+        "name": "Pem",
+        "position": "Product Manager"
+      },
+      {
+        "name": "Nasha",
+        "position": "Blogger"
+      },
+      {
+        "name": "Feruza",
+        "position": "Head of Sales Department"
+      }
+    ]
+  },
+
+  "stats": {
+    "title": "We Have",
+    "subtitle": "Numbers",
+    "employees": "Number of Employees",
+    "ad_campaigns": "Ad Campaigns Launched",
+    "success_cases": "Successful Cases"
+  },
+
+  "clients": {
+    "trusted_clients": "Trusted Clients",
+    "continue": "It continues... Your logo could be here",
+    "become_client": "Become a Client",
+    "name": "Name",
+    "email_or_telegram": "Email or Telegram",
+    "phone_number": "Phone Number",
+    "your_message": "Your Message",
+    "welcome": "Welcome!",
+    "error": "Login Error, Try Again.",
+    "warning": "Please Fill in All Fields."
+  },
+
+  "contact1": {
+    "question": "What is your question?",
+    "name": "Name",
+    "email_or_telegram": "Email or Telegram",
+    "phone_number": "Phone Number",
+    "your_message": "Your Message",
+    "success_message": "Information Sent",
+    "error_message": "Sending Error",
+    "warning_message": "Incorrect Data",
+    "submit": "Submit",
+    "alt_text": "Customer Service"
+  },
+
+  "comments": {
+    "title": "Reviews",
+    "subtitle": "About Us",
+    "writeReview": "Write a Review",
+    "name": "Your Name",
+    "rating": "Rating",
+    "feedback": "Your Feedback",
+    "submit": "Submit"
+  },
+  "Video": "Video",
+
+  "about": {
+    "title": "About Us",
+    "description": {
+      "part1": "InOut offers a wide range of advertising services, including outdoor advertising in Tashkent. You can order advertising on LED screens as well as on lightboxes and banners. Advertising is done quickly, with a guarantee and at an affordable price.",
+      "part2": "CLEAR ADVANTAGES",
+      "part3": "Outdoor advertising is a cheap and very effective way to deliver the necessary information to the target audience. Using business cards to provide initial information allows you to attract the attention of your target audience.",
+      "part4": "Using LED screens as outdoor advertising is one of the most promising formats and demonstrates the high status of the company or organization advertising its products (services)."
+    },
+    "statistics": {
+      "title": "Our Short Statistics",
+      "successful_teams": "Successful Teamwork",
+      "working_in_company": "Working in Our Company",
+      "promoted_in_social_media": "Promoted on Social Media",
+      "developed_and_launched": "Developed and Launched",
+      "products_in_graph": "Products in the Graph"
+    },
+    "find_us": "Find Us on Social Media"
+  },
+
+  "vacancy1": {
+    "title": "Vacancies",
+    "required_skills": "Required Skills",
+    "more": "More Details",
+    "call_center_operator": "Call Center Operator",
+    "web_designer": "Web Designer",
+    "logistician": "Logistician",
+    "education": "Education",
+    "experience": "Experience",
+    "skills": "Skills"
+  },
+
+  "notfound": {
+    "iconAlt": "Not Found Icon",
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist."
+  },
+
+  "footer": {
+    "logoAlt": "Logo",
+    "days": "Mon-Fri",
+    "location": "All Uzbekistan",
+    "socials": "Our Social Networks",
+    "team": "Inout Team",
+    "copyright": "Copyright ©",
+    "rights": "All Rights Reserved"
+  }
+}

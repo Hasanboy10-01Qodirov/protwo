@@ -42,3 +42,48 @@ li {
 .button:focus-visible::after {
   scale: 1 1;
 }
+
+.dark-mode {
+  transition: all 0.3s;
+  background: #1d2e34;
+}
+.light-mode {
+  transition: all 0.3s;
+  background: #ffe;
+  .map-container {
+    h2 {
+      color: #1d2e34;
+    }
+  }
+  .catalogs {
+    p {
+      color: #1d2e34;
+    }
+  }
+  .clients-title,
+  .intro__title {
+    color: #1d2e34;
+  }
+  .clients-text,
+  .ourteam .text,
+  .comments__title,
+  .comments__modal-close {
+    color: #2f4147;
+  }
+  .services {
+    background: inherit;
+  }
+  .comments__modal-content {
+    background: #e0e0ea;
+    h2,
+    label,
+    input,
+    textarea {
+      color: #2f4147;
+    }
+    input,
+    textarea {
+      background: #f0f0f0;
+    }
+  }
+}

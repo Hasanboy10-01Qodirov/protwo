@@ -1,16 +1,14 @@
 .about {
   width: 100%;
   &-wrapper {
-    width: 1200px;
+    max-width: 1200px;
     margin: 50px auto 0;
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
   }
   &-back {
-    width: 190px;
-    padding: 10px 0;
+    padding: 10px 40px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -26,12 +24,10 @@
       color: #f5f5f5;
     }
     &:hover .icon {
-      animation: back ease-in-out 0.4s 2;
+      animation: back ease-in-out 0.35s 2;
     }
   }
   &-parts {
-    max-width: 700px;
-    width: 700px;
     h3 {
       font-size: 36px;
       font-weight: 600;

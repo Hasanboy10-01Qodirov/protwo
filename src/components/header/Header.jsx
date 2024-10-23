@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./header.scss";
 import logo from "../../assets/img/logo.png";
 import uz from "../../assets/img/uz.png";
@@ -8,37 +8,67 @@ import { Button } from "@mui/material";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import SmsOutlinedIcon from "@mui/icons-material/SmsOutlined";
+import { useTranslation } from "react-i18next";
+
 const Header = () => {
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState("uz");
+
+  const handleLanguages = (selectedLanguage) => {
+    setLanguage(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage);
+    localStorage.setItem("language", selectedLanguage);
+  };
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language") || "uz";
+    setLanguage(savedLanguage);
+    i18n.changeLanguage(savedLanguage);
+  }, [i18n]);
+
   return (
     <div className="header">
       <div className="header-wrapper">
-        <img src={logo} alt="" className="header-logo" />
+        <img src={logo} alt="Logo" className="header-logo" />
         <div className="header-connection">
           <Button color="inherit" className="header-contact">
             <SendOutlinedIcon />
-            <p className="header-text">Telegram</p>
+            <p className="header-text">{t("telegram")}</p>
           </Button>
           <Button color="inherit" className="header-contact">
             <DownloadOutlinedIcon />
-            <p className="header-text">Taqdimot (35 mb)</p>
+            <p className="header-text">{t("presentation")}</p>
           </Button>
           <Button color="inherit" className="header-contact">
             <SmsOutlinedIcon />
-            <p className="header-text">Arizangizni yuboring</p>
+            <p className="header-text">{t("applyNow")}</p>
           </Button>
         </div>
+
         <div className="header-languages">
-          <Button className="header-language" variant="text">
-            <img src={uz} alt="" className="header-flag" />
-            <option value="uz">Uz</option>
+          <Button
+            className={`header-language ${language === "uz" ? "active" : ""}`}
+            variant="text"
+            onClick={() => handleLanguages("uz")}
+          >
+            <img src={uz} alt="Uzbek" className="header-flag" />
+            <span>Uz</span>
           </Button>
-          <Button className="header-language" variant="text">
-            <img src={ru} alt="" className="header-flag" />
-            <option value="ru">Ru</option>
+          <Button
+            className={`header-language ${language === "ru" ? "active" : ""}`}
+            variant="text"
+            onClick={() => handleLanguages("ru")}
+          >
+            <img src={ru} alt="Russian" className="header-flag" />
+            <span>Ru</span>
           </Button>
-          <Button className="header-language" variant="text">
-            <img src={en} alt="" className="header-flag" variant="text" />
-            <option value="en">En</option>
+          <Button
+            className={`header-language ${language === "en" ? "active" : ""}`}
+            variant="text"
+            onClick={() => handleLanguages("en")}
+          >
+            <img src={en} alt="English" className="header-flag" />
+            <span>En</span>
           </Button>
         </div>
       </div>

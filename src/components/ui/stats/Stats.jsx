@@ -3,8 +3,10 @@ import "./stats.scss";
 import raketa from "../../../assets/img/raketa.png";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import { useTranslation } from "react-i18next";
 
 const Stats = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   return (
@@ -12,7 +14,7 @@ const Stats = () => {
       <div className="container">
         <div className="stats__container">
           <h2 className="stats__title">
-            Bizda <span>raqamlar mavjud</span>
+            {t("stats.title")} <span>{t("stats.subtitle")}</span>
           </h2>
           <div className="stats__items">
             <VisibilitySensor
@@ -30,7 +32,7 @@ const Stats = () => {
                       />
                       <p>+</p>
                     </span>
-                    <p className="stats__description">Xodimlar soni</p>
+                    <p className="stats__description">{t("stats.employees")}</p>
                   </div>
                   <div className="stats__item">
                     <span className="stats__number">
@@ -42,7 +44,7 @@ const Stats = () => {
                       <p>+</p>
                     </span>
                     <p className="stats__description">
-                      reklama kampaniyalarini boshladi
+                      {t("stats.ad_campaigns")}
                     </p>
                   </div>
                   <div className="stats__item">
@@ -55,7 +57,7 @@ const Stats = () => {
                       <p>+</p>
                     </span>
                     <p className="stats__description">
-                      muvaffaqiyatli holatlar
+                      {t("stats.success_cases")}
                     </p>
                   </div>
                   <img src={raketa} alt="Rocket" className="stats__rocket" />

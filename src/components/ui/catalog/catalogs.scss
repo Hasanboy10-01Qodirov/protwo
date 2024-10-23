@@ -2,8 +2,8 @@
   width: 100%;
   padding: 40px 0 0;
   &-wrapper {
-    width: 1200px;
-    margin: 50px auto;
+    max-width: 1200px;
+    margin: 50px auto 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;

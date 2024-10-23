@@ -4,8 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import videos from "../../../assets/data/videos";
+import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const PlayIcon = () => (
   <svg
@@ -21,11 +23,14 @@ const PlayIcon = () => (
 );
 
 const Videos = () => {
+  const { t } = useTranslation();
   return (
     <div className="videos">
       <div className="clients-top">
-        <h2 className="clients-title">Video</h2>
-        <button className="button">Barchasini ko'rish</button>
+        <h2 className="clients-title">{t("Video")}</h2>
+        <NavLink to="/allvideo">
+          <button className="button">{t("allVideos")}</button>
+        </NavLink>
       </div>
       <Swiper
         spaceBetween={30}
@@ -33,7 +38,7 @@ const Videos = () => {
         navigation
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         loop={true}
-        modules={[ Navigation, Autoplay]}
+        modules={[Navigation, Autoplay]}
       >
         {videos?.map((elem) => (
           <SwiperSlide key={elem.id}>

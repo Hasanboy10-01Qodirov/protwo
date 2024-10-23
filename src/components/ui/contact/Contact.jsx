@@ -4,6 +4,7 @@ import axios from "axios";
 import { toast, Zoom } from "react-toastify";
 import { Button } from "@mui/material";
 import contactImage from "../../../assets/img/admin.png";
+import { useTranslation } from "react-i18next"; // Importing useTranslation
 
 const initialState = {
   name: "",
@@ -28,6 +29,7 @@ const formReducer = (state, action) => {
 
 const Contact = () => {
   const [formData, dispatch] = useReducer(formReducer, initialState);
+  const { t } = useTranslation(); // Using the useTranslation hook
 
   const handleValue = (e) => {
     dispatch({
@@ -41,7 +43,7 @@ const Contact = () => {
     e.preventDefault();
 
     if (!formData.name.trim()) {
-      toast.error("Please enter your name", {
+      toast.error(t("clients.warning_message"), {
         position: "top-center",
         autoClose: 2000,
         hideProgressBar: true,
@@ -56,7 +58,7 @@ const Contact = () => {
     }
 
     if (!formData.email.trim() || !/\S+@\S+\.\S+/.test(formData.email)) {
-      toast.error("Please enter a valid email", {
+      toast.error(t("clients.warning_message"), {
         position: "top-center",
         autoClose: 2000,
         hideProgressBar: true,
@@ -71,7 +73,7 @@ const Contact = () => {
     }
 
     if (!formData.number.trim() || isNaN(formData.number)) {
-      toast.error("Please enter a valid phone number", {
+      toast.error(t("clients.warning_message"), {
         position: "top-center",
         autoClose: 2000,
         hideProgressBar: true,
@@ -98,7 +100,7 @@ const Contact = () => {
       },
     })
       .then((data) => {
-        toast.success("We will contact you soon", {
+        toast.success(t("clients.success_message"), {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -111,7 +113,7 @@ const Contact = () => {
         });
       })
       .catch((error) => {
-        toast.error("An error occurred, please try again", {
+        toast.error(t("clients.error_message"), {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: true,
@@ -129,22 +131,21 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact" id="contact">
+    <div className="contact">
       <div className="contact-wrapper">
         <div className="contact-parts">
           <div className="contact-left">
-            <h1 className="contact-title">Bizga qanday savolingiz bor?</h1>
+            <h1 className="contact-title">{t("contact1.question")}</h1>
             <form onSubmit={handleSubmit} className="contact-form">
-              {/* <div className="contact-inputs"> */}
               <div className="contact-box">
                 <label htmlFor="name" className="contact-label">
-                  Ism
+                  {t("contact1.name")}
                 </label>
                 <input
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="Ismingizni kiriting"
+                  placeholder={t("contact1.name")}
                   className="contact-input"
                   value={formData.name}
                   onChange={handleValue}
@@ -153,13 +154,13 @@ const Contact = () => {
               </div>
               <div className="contact-box">
                 <label htmlFor="email" className="contact-label">
-                  Elektron pochta yoki Telegram
+                  {t("contact1.email_or_telegram")}
                 </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="Elektron pochtangizni yoki Telegramni kiriting"
+                  placeholder={t("contact1.email_or_telegram")}
                   className="contact-input"
                   value={formData.email}
                   onChange={handleValue}
@@ -168,48 +169,45 @@ const Contact = () => {
               </div>
               <div className="contact-box">
                 <label htmlFor="number" className="contact-label">
-                  Telefon raqami
+                  {t("contact1.phone_number")}
                 </label>
                 <input
                   id="number"
                   name="number"
                   type="tel"
-                  placeholder="+998"
+                  placeholder={t("contact1.phone_number")}
                   className="contact-input"
                   value={formData.number}
                   onChange={handleValue}
                   required
                 />
               </div>
-              {/* </div> */}
               <div className="contact-box">
                 <label htmlFor="message" className="contact-label">
-                  Sizning xabaringiz
+                  {t("contact1.your_message")}
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   cols="30"
                   rows="5"
-                  placeholder="Sizning xabaringiz"
+                  placeholder={t("contact1.your_message")}
                   className="contact-message"
                   value={formData.message}
                   onChange={handleValue}
                 />
               </div>
-              <Button
-                variant="contained"
-                color="primary"
-                size="medium"
-                className="contact-btn"
-                type="submit"
-              >
-                Yuborish
-              </Button>
+              <button className="button" type="submit">
+                {t("contact1.submit")}
+              </button>
             </form>
           </div>
           <div className="contact-right">
-            <img src={contactImage} alt="Contact" className="contact-img" />
+            <img
+              src={contactImage}
+              alt={t("contact1.alt_text")}
+              className="contact-img"
+            />
           </div>
         </div>
       </div>

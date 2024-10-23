@@ -1,6 +1,6 @@
 .videos {
-  width: 1200px;
-  margin: 100px auto;
+  max-width: 1200px;
+  margin: 60px auto;
   .swiper-slide {
     display: flex;
     justify-content: center;
@@ -47,13 +47,19 @@
   .swiper-button-next,
   .swiper-button-prev {
     font-size: 15px;
-    // background-color: #00bcd4;
     color: #fff;
     border-radius: 50%;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  &-wrapper {
+    margin-top: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
   }
 }
 
